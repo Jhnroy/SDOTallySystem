@@ -1,0 +1,148 @@
+body, * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainHeader {
+  background-color: #800000;
+  height: 9.125rem;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+  animation: transitionIn 0.75s;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+/* Navigation Bar */
+#nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+#nav li a {
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#nav li a:hover {
+  background-color: #cc0000;
+  color: #fff;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* General styles for all material icons */
+  /* Hover effect */
+  /* Smaller size for notifications icon */
+  /* Larger size for account_circle icon */
+  /* Hover effect for individual icons */
+}
+.profile .material-symbols-outlined {
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.profile .material-symbols-outlined:hover {
+  color: #ffcccb;
+}
+.profile .notifications-icon {
+  font-size: 2rem; /* Adjust size as needed */
+}
+.profile .account-icon {
+  font-size: 4rem; /* Adjust size as needed */
+}
+.profile .notifications-icon:hover {
+  color: #ffcccb;
+}
+.profile .account-icon:hover {
+  color: #ffcccb;
+}
+
+/* Logo Styling */
+#MainLogo {
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.headline {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  height: 5rem;
+  background-color: #800000;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Mobile and Tablet Responsiveness */
+@media screen and (max-width: 768px) {
+  #mainHeader {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+  }
+  #nav ul {
+    display: none; /* Hide navigation by default */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #800000;
+    position: absolute;
+    top: 9.125rem;
+    left: 0;
+    padding: 1rem;
+    z-index: 9;
+  }
+  #nav ul.show {
+    display: flex; /* Display the menu */
+  }
+  .hamburger {
+    display: block; /* Show the hamburger icon */
+  }
+  #nav li a {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+  .profile {
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  .notifications-icon, .account-icon {
+    font-size: 3rem;
+  }
+}/*# sourceMappingURL=gameschedule.css.map */

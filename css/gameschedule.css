@@ -145,4 +145,102 @@ body, * {
   .notifications-icon, .account-icon {
     font-size: 3rem;
   }
+}
+.calendar-section {
+  padding: 2rem;
+  background-color: #f9eaea;
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-container {
+  background-color: #800000;
+  border-radius: 10px;
+  color: white;
+  padding: 1.5rem;
+  max-width: 500px; /* Limit width on larger screens */
+  width: 100%; /* Take full width on smaller devices */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.calendar-header button:hover {
+  color: #ffcccb;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.calendar div {
+  padding: 10px;
+  background-color: black;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.calendar div:hover {
+  background-color: #cc0000;
+}
+
+.calendar .empty {
+  background-color: transparent;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .calendar-container {
+    padding: 1rem;
+    max-width: 100%; /* Take full width on tablets and smaller */
+  }
+  .calendar-header {
+    font-size: 1.5rem; /* Reduce header font size */
+  }
+  .calendar-header button {
+    font-size: 1.8rem; /* Adjust button size for smaller devices */
+  }
+  .calendar div {
+    padding: 8px; /* Reduce padding for smaller days */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+  .calendar {
+    gap: 0.3rem; /* Reduce gap between grid items */
+  }
+}
+@media (max-width: 480px) {
+  .calendar-header {
+    font-size: 1.2rem; /* Further reduce font size for small phones */
+  }
+  .calendar-header button {
+    font-size: 1.5rem; /* Smaller buttons for phones */
+  }
+  .calendar div {
+    padding: 6px; /* Even smaller padding for days */
+    font-size: 0.8rem; /* Smaller font size */
+  }
+  .calendar {
+    gap: 0.2rem; /* Reduce gap for very small screens */
+  }
 }/*# sourceMappingURL=gameschedule.css.map */
